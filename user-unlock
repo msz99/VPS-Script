@@ -1,0 +1,41 @@
+#!/bin/bash
+# Created by MSZ99
+# Uban User.
+red='\e[31m'
+green='\e[32m'
+blue='\e[34m'
+NC='\e[0m'
+echo -e "\e[36m------------------------------------------\e[0m"
+read -p "※ Enter Username To Be Unlock : " username
+egrep "^$username" /etc/passwd >/dev/null
+if [ $? -eq 0 ]; then
+# proses mengganti passwordnya
+passwd -u $username
+clear
+  echo " ";
+	echo " ";
+	echo " ";
+	echo " ";
+	echo -e "  \e[92m__  __  ___  ____ __   __ ___  _  _\e[0m ";
+	echo -e " \e[92m|  \/  |/ __||_  / \ \ / /| _ \| \| |\e[0m";
+	echo -e " \e[92m| |\/| |\__ \ / /   \ V / |  _/|  \ |\e[0m";
+	echo -e " \e[92m|_|  |_||___//___|   \_/  |_|  |_|\_|\e[0m";
+	echo -e "                                      ";
+	echo -e "          \e[92mTELEGRAM PM @MSZ99\e[0m          ";
+	echo -e "   \e[92mTELEGRAM CHANNEL @TELCOBOOSTERVPN\e[0m  ";
+	echo -e "    \e[92mTELEGRAM GROUP @TELCO_BOOSTERVPN\e[0m   ";
+	echo -e "                                      ";
+	echo " ◎ Your Account Status ◎";
+  echo " "
+  echo -e "  \e[34m※\e[0m Username : ${blue}$username${NC}";
+  echo -e "  \e[32m※\e[0m Status   : ${green}UNLOCKED${NC}";
+  echo " ";
+  echo " ★ POWER BY MSZ99™ SERVER ★";
+  echo " ";
+	echo " ";
+	echo " ";
+	echo " ";
+else
+echo "Username ${red}$username${NC} Does Not Exist ..!"
+    exit 1
+fi
